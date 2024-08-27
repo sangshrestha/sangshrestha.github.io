@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./fonts/JetBrainsMono-Regular.woff2");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+html {
+  color: #ccc;
+  font-family: "JetBrains Mono";
+  font-size: 1px;
+  line-height: 1.5;
+
+  background-color: #1e1e1e;
+
+  @media (max-width: 500px) {
+    font-size: 0.8px;
+  }
+}
+
+body {
+  padding: 5rem;
+
+  font-size: 18rem;
+}
+
+.nav {
+  column-gap: 3em;
+  display: flex;
+  flex-flow: row wrap;
+
+  list-style-type: none;
+
+  li {
+    width: max-content;
+  }
+}
+
+p:empty::before {
+  content: " ";
+  white-space: pre;
+}
+
+.pad-s {
+  padding-left: 15rem;
+}
+
+.tprompt {
+  margin-top: 1.5em;
+}
+
+.cursor {
+  animation: blink 1.2s steps(2) infinite;
+}
+
+@keyframes blink {
+  0% {
+    visibility: hidden;
+  }
+}
