@@ -44,6 +44,15 @@ body {
   }
 }
 
+p {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.show {
+  opacity: 1;
+}
+
 p:empty::before {
   content: " ";
   white-space: pre;
