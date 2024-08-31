@@ -53,6 +53,10 @@ p {
   opacity: 1;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 p:empty::before {
   content: " ";
   white-space: pre;

@@ -43,7 +43,7 @@ async function drawLines(lines) {
         line.classList.add("show");
 
         for (const char of inputContent) {
-          await wait(100);
+          await wait(50);
           inputSpan.innerHTML += char;
         }
       } else {
