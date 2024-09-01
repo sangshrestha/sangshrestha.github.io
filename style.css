@@ -57,7 +57,7 @@ a {
 }
 
 /* terminal lines */
-header {
+hgroup {
   color: var(--clr-green);
 }
 
