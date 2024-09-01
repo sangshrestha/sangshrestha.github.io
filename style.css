@@ -12,7 +12,7 @@
 }
 
 html {
-  color: #ddd;
+  color: #eee;
   font-family: "JetBrains Mono";
   font-size: 1px;
   line-height: 1.5;
@@ -76,10 +76,6 @@ p:empty::before {
 
 .pad {
   padding-left: 15rem;
-}
-
-main {
-  color: #eee;
 }
 
 /* animation */
