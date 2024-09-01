@@ -1,20 +1,18 @@
+/* font */
 @font-face {
   font-family: "JetBrains Mono";
   src: url("./fonts/JetBrainsMono-Regular.woff2");
 }
 
+/* defaults */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-a {
-  color: inherit;
-}
-
 html {
-  color: #ccc;
+  color: #ddd;
   font-family: "JetBrains Mono";
   font-size: 1px;
   line-height: 1.5;
@@ -29,9 +27,19 @@ html {
 body {
   padding: 5rem;
 
-  font-size: 18rem;
+  font-size: 16rem;
 }
 
+a {
+  color: inherit;
+}
+
+/* utility */
+.no-underline {
+  text-decoration: none;
+}
+
+/* nav */
 .nav {
   column-gap: 3em;
   display: flex;
@@ -44,17 +52,13 @@ body {
   }
 }
 
+/* terminal lines */
 p {
   opacity: 0;
-  transition: opacity 0.1s;
 }
 
 .show {
   opacity: 1;
-}
-
-.no-underline {
-  text-decoration: none;
 }
 
 p:empty::before {
@@ -62,14 +66,11 @@ p:empty::before {
   white-space: pre;
 }
 
-.pad-s {
+.pad {
   padding-left: 15rem;
 }
 
-.tprompt {
-  margin-top: 1.5em;
-}
-
+/* animation */
 .cursor {
   animation: blink 1.2s steps(2) infinite;
 }

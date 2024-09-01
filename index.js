@@ -1,3 +1,4 @@
+// write version number
 const SECOND = 1000; // in ms
 const MINUTE = SECOND * 60;
 const HOUR = MINUTE * 60;
@@ -9,13 +10,13 @@ const START_DATE = new Date("2021-05-20");
 const yearsSince = new Date().getUTCFullYear() - START_DATE.getUTCFullYear();
 
 const updatedDate = START_DATE.setFullYear(
-  START_DATE.getFullYear() + yearsSince,
+  START_DATE.getFullYear() + yearsSince
 );
 
 const differenceInMs = Date.now() - updatedDate;
 const monthsRemaining = Math.round(differenceInMs / MONTH);
 const secondsRemaining = Math.round(
-  (differenceInMs - monthsRemaining) / SECOND,
+  (differenceInMs - monthsRemaining) / SECOND
 );
 
 const versionSpan = document.querySelector("#version");
@@ -32,26 +33,21 @@ function wait(s) {
 
 async function drawLines(lines) {
   for (const line of lines) {
-    await wait(250);
+    const inputSpan = line.querySelector(".input");
+    if (inputSpan) {
+      const inputContent = [...inputSpan.innerHTML];
+      inputSpan.innerHTML = "";
 
-    if (line.classList.contains("tprompt")) {
-      const inputSpan = line.querySelector(".tprompt__input");
+      line.classList.add("show");
 
-      if (inputSpan) {
-        const inputContent = [...inputSpan.innerHTML];
-        inputSpan.innerHTML = "";
-        line.classList.add("show");
-
-        for (const char of inputContent) {
-          await wait(50);
-          inputSpan.innerHTML += char;
-        }
-      } else {
-        line.classList.add("show");
+      for (const char of inputContent) {
+        await wait(50);
+        inputSpan.innerHTML += char;
       }
     } else {
       line.classList.add("show");
     }
+    await wait(100);
   }
 }
 
