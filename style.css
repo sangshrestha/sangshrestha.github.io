@@ -19,6 +19,10 @@ html {
 
   background-color: #1e1e1e;
 
+  /* variables */
+  --clr-green: #55ff55;
+  --clr-cyan: #55ffff;
+
   @media (max-width: 500px) {
     font-size: 0.8px;
   }
@@ -31,7 +35,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--clr-cyan);
 }
 
 /* utility */
@@ -53,6 +57,10 @@ a {
 }
 
 /* terminal lines */
+header {
+  color: var(--clr-green);
+}
+
 p {
   opacity: 0;
 }
@@ -68,6 +76,10 @@ p:empty::before {
 
 .pad {
   padding-left: 15rem;
+}
+
+main {
+  color: #eee;
 }
 
 /* animation */
