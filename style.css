@@ -26,6 +26,7 @@ html {
   /* variables */
   --clr-green: #55ff55;
   --clr-cyan: #55ffff;
+  --clr-magenta: #ff55ff;
 
   @media (max-width: 500px) {
     font-size: 0.8px;
@@ -36,6 +37,24 @@ body {
   padding: 5rem;
 
   font-size: 16rem;
+}
+
+h1,
+h2 {
+  font-size: 16rem;
+  font-weight: 400;
+
+  opacity: 0;
+}
+
+h1::before {
+  content: "# ";
+  color: var(--clr-magenta);
+}
+
+h2::before {
+  content: "## ";
+  color: var(--clr-magenta);
 }
 
 a:not(.dir) {

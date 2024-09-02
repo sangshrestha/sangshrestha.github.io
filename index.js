@@ -23,7 +23,7 @@ const versionSpan = document.querySelector("#version");
 versionSpan.innerText = `${yearsSince}.${monthsRemaining}.${secondsRemaining}`;
 
 // animation for drawing terminal lines
-const lines = [...document.querySelectorAll("p:not(.show), li")];
+const lines = [...document.querySelectorAll("p:not(.show), li, h1, h2")];
 
 const inputAnimationDelayTotal = 0;
 
