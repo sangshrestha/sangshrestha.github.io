@@ -11,6 +11,10 @@
   padding: 0;
 }
 
+a {
+  color: inherit;
+}
+
 html {
   color: #eee;
   font-family: "JetBrains Mono";
@@ -34,7 +38,7 @@ body {
   font-size: 16rem;
 }
 
-a {
+a:not(.dir) {
   color: var(--clr-cyan);
 }
 
