@@ -39,8 +39,16 @@ a {
 }
 
 /* utility */
-.no-underline {
+.u-no-underline {
   text-decoration: none;
+}
+
+.u-mt {
+  margin-top: 1.5em;
+}
+
+.u-pad {
+  padding-left: 15rem;
 }
 
 /* nav */
@@ -72,10 +80,6 @@ p {
 p:empty::before {
   content: " ";
   white-space: pre;
-}
-
-.pad {
-  padding-left: 15rem;
 }
 
 /* animation */

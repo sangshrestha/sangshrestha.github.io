@@ -10,13 +10,13 @@ const START_DATE = new Date("2021-05-20");
 const yearsSince = new Date().getUTCFullYear() - START_DATE.getUTCFullYear();
 
 const updatedDate = START_DATE.setFullYear(
-  START_DATE.getFullYear() + yearsSince
+  START_DATE.getFullYear() + yearsSince,
 );
 
 const differenceInMs = Date.now() - updatedDate;
 const monthsRemaining = Math.round(differenceInMs / MONTH);
 const secondsRemaining = Math.round(
-  (differenceInMs - monthsRemaining) / SECOND
+  (differenceInMs - monthsRemaining) / SECOND,
 );
 
 const versionSpan = document.querySelector("#version");
@@ -41,7 +41,7 @@ async function drawLines(lines) {
       line.classList.add("show");
 
       for (const char of inputContent) {
-        await wait(50);
+        await wait(45);
         inputSpan.innerHTML += char;
       }
     } else {
