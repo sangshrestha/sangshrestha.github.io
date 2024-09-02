@@ -38,6 +38,14 @@ a {
   color: var(--clr-cyan);
 }
 
+ol {
+  list-style-position: inside;
+}
+
+li {
+  opacity: 0;
+}
+
 /* utility */
 .u-no-underline {
   text-decoration: none;
