@@ -14,10 +14,9 @@ const updatedDate = START_DATE.setFullYear(
 );
 
 const differenceInMs = Date.now() - updatedDate;
-const monthsRemaining = Math.round(differenceInMs / MONTH);
-const secondsRemaining = Math.round(
-  (differenceInMs - monthsRemaining) / SECOND,
-);
+const monthsRemaining = Math.floor(differenceInMs / MONTH);
+const remainingMs = differenceInMs % MONTH;
+const secondsRemaining = Math.round(remainingMs / SECOND);
 
 const versionSpan = document.querySelector("#version");
 versionSpan.innerText = `${yearsSince}.${monthsRemaining}.${secondsRemaining}`;
