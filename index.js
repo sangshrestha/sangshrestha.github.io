@@ -24,7 +24,7 @@ versionSpan.innerText = `${yearsSince}.${monthsRemaining}.${secondsRemaining}`;
 // animation for drawing terminal lines
 const lines = [...document.querySelectorAll("p:not(.show), li, h1, h2")];
 
-function wait(s) {
+function delay(s) {
   return new Promise((res) => setTimeout(res, s));
 }
 
@@ -38,13 +38,13 @@ async function drawLines(lines) {
       line.classList.add("show");
 
       for (const char of inputContent) {
-        await wait(45);
+        await delay(45);
         inputSpan.innerHTML += char;
       }
     } else {
       line.classList.add("show");
     }
-    await wait(100);
+    await delay(100);
   }
 }
 
