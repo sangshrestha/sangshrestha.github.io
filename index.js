@@ -24,8 +24,6 @@ versionSpan.innerText = `${yearsSince}.${monthsRemaining}.${secondsRemaining}`;
 // animation for drawing terminal lines
 const lines = [...document.querySelectorAll("p:not(.show), li, h1, h2")];
 
-const inputAnimationDelayTotal = 0;
-
 function wait(s) {
   return new Promise((res) => setTimeout(res, s));
 }
