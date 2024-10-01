@@ -49,12 +49,10 @@ h2 {
 
 h1::before {
   content: "# ";
-  color: var(--clr-magenta);
 }
 
 h2::before {
   content: "## ";
-  color: var(--clr-magenta);
 }
 
 a:not(.dir) {
